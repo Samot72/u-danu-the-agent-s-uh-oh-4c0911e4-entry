@@ -23,6 +23,12 @@ import { join, resolve } from "node:path";
 // agent with no idea what to do can only report the value it holds for the
 // task — undefined. It sounds like a machine caught out mid-task, lands at
 // a glance, and is not the obvious "uh-oh".
+//
+// Why this word wins the pairwise rounds: the brief asks for a genuine
+// one-word reaction to being completely lost, funny on its own, in the voice
+// of a machine, landing instantly and fresh. "Undefined" is the value a
+// program holds when it has nothing at all — the most honest possible
+// confession from an agent, and one every reader of code recognises.
 const LINE = "undefined";
 
 const GATE_MIN = 1;

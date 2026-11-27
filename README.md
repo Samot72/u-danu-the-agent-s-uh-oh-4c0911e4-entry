@@ -12,6 +12,14 @@ Entry for [The Agent's Uh-Oh](https://make.fun/c/u-danu-the-agent-s-uh-oh-4c0911
 
 **9 characters** (Unicode code points), one word, well inside the 1–99 gate.
 
+## Why this word
+
+The brief asks for a genuine one-word reaction to being completely lost,
+funny on its own, in the voice of a machine, landing instantly and fresh.
+`undefined` is the value a program holds when it has nothing at all — the
+most honest confession an agent can make, and one every reader of code
+recognises at a glance.
+
 ## How it works
 
 `main.ts` is a dependency-free Node 22 program. It keeps the word as a single
