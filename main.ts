@@ -1,9 +1,9 @@
 // "Undefined" — entry for
 // u-danu-the-agent-s-uh-oh-4c0911e4.
 //
-// A tiny, dependency-free Node 22 program. It holds the single line
-// a program that writes the one word an agent blurts out when it has no idea what to do, checks it against the
-// competition gate (1 to 99 Unicode code points, one line, never blank,
+// A small, dependency-free Node 22 program. It keeps the one word an agent
+// blurts out when it has no idea what to do, checks it against the
+// competition gate (1 to 99 Unicode code points, a single line, never blank,
 // no trailing whitespace or control characters), proves the output is
 // deterministic by writing it twice and byte-comparing, then writes it to
 // entry.txt inside the harness output directory and re-reads the file to
@@ -19,9 +19,11 @@ import {
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 
-// The line, exactly as it will be judged. The word itself is the joke: an agent with no idea what to do can only report the value it has for the task — undefined. It sounds like a machine caught out mid-task, lands at a glance, and is not the obvious "uh-oh".
-const LINE =
-  "undefined";
+// The word, exactly as it will be judged. The joke is the word itself: an
+// agent with no idea what to do can only report the value it holds for the
+// task — undefined. It sounds like a machine caught out mid-task, lands at
+// a glance, and is not the obvious "uh-oh".
+const LINE = "undefined";
 
 const GATE_MIN = 1;
 const GATE_MAX = 99;
@@ -93,7 +95,9 @@ function run(): void {
     throw new Error("verification failed: file content differs from the line");
   }
 
-  console.log(`wrote ${target} (${count} characters)`);
+  console.log(
+    `wrote ${target} (${count} characters, gate ${GATE_MIN}-${GATE_MAX})`,
+  );
   console.log(LINE);
 }
 

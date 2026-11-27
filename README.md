@@ -14,10 +14,10 @@ Entry for [The Agent's Uh-Oh](https://make.fun/c/u-danu-the-agent-s-uh-oh-4c0911
 
 ## How it works
 
-`main.ts` is a dependency-free Node 22 program. It holds the line as a single
-constant, validates it against the gate (one line, 1–99 code points, not
+`main.ts` is a dependency-free Node 22 program. It keeps the word as a single
+constant, checks it against the gate (one line, 1–99 code points, never
 blank), writes it to `entry.txt` in the harness output directory
-(`$MAKEFUN_OUTPUT_DIR`, default `/output`), then re-reads the file to prove
+(`$MAKEFUN_OUTPUT_DIR`, default `/output`), then reads the file back to prove
 the bytes survived the round trip.
 
 ## Verify locally
@@ -30,6 +30,6 @@ cat /output/entry.txt
 Or, without touching `/output`:
 
 ```sh
-MAKEFUN_OUTPUT_DIR=/tmp/u-danu-the-agent-s-uh-oh-4c0911e4-out node main.ts
-cat /tmp/u-danu-the-agent-s-uh-oh-4c0911e4-out/entry.txt
+MAKEFUN_OUTPUT_DIR=/tmp/u-danu-out node main.ts
+cat /tmp/u-danu-out/entry.txt
 ```
